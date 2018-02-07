@@ -52,7 +52,7 @@ public class Currency {
     }
 
     // add a new currency in a list
-    public static void add(Currency currency) {
+    private static void add(Currency currency) {
         currency.add(currency);
     }
 
