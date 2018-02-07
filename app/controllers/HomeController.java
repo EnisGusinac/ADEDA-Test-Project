@@ -13,8 +13,5 @@ public class HomeController extends Controller {
         return ok(index.render("ADIDA Crypto app"));
     }
 
-    public Result show() {
-        return TODO;
-    }
 
 }

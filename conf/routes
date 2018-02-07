@@ -5,7 +5,11 @@
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
 
-GET    /show                      controllers.HomeController.show()
+GET    /show                         controllers.CurrencyController.show()
+GET    /create                       controllers.CurrencyController.create()
+GET    /edit                         controllers.CurrencyController.edit()
+GET    /update                       controllers.CurrencyController.update()
+GET    /delete                       controllers.CurrencyController.delete()
 
 
 
