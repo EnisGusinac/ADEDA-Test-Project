@@ -5,11 +5,14 @@
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
 
-GET    /show                         controllers.CurrencyController.show()
-GET    /create                       controllers.CurrencyController.create()
-GET    /edit/:id                     controllers.CurrencyController.edit(id: String)
-GET    /update/:id                   controllers.CurrencyController.update(id: String)
-GET    /delete                       controllers.CurrencyController.delete()
+
+# Routes for handling CurrencyController methods
+GET     /currency                                  controllers.CurrencyController.index
+GET     /currency/create                           controllers.CurrencyController.create()
+GET     /currency/show/:id                         controllers.CurrencyController.show(id: String)
+GET     /currency/edit/:id                         controllers.CurrencyController.edit(id: String)
+POST    /currency/edit                             controllers.CurrencyController.update()
+GET     /currency/delete                           controllers.CurrencyController.delete()
 
 
 

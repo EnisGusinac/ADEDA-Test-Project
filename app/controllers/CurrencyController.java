@@ -5,7 +5,11 @@ import play.mvc.Result;
 
 public class CurrencyController extends Controller{
 
-    public Result show() {
+    public Result index() {
+        return TODO;
+    }
+
+    public Result show(String id) {
         return TODO;
     }
 
@@ -17,7 +21,11 @@ public class CurrencyController extends Controller{
         return TODO;
     }
 
-    public Result update(String id){
+    public Result update(){
+        return TODO;
+    }
+
+    public Result save() {
         return TODO;
     }
 
