@@ -7,6 +7,7 @@ public class Currency {
     public Integer rank;
     public Double price_usd;
     public Double price_btc;
+    public Double volume_usd_24h;
     public Double market_cap_usd;
     public Double available_supply;
     public Double total_supply;
