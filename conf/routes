@@ -7,8 +7,8 @@ GET     /                           controllers.HomeController.index
 
 GET    /show                         controllers.CurrencyController.show()
 GET    /create                       controllers.CurrencyController.create()
-GET    /edit                         controllers.CurrencyController.edit()
-GET    /update                       controllers.CurrencyController.update()
+GET    /edit/:id                     controllers.CurrencyController.edit(id: String)
+GET    /update/:id                   controllers.CurrencyController.update(id: String)
 GET    /delete                       controllers.CurrencyController.delete()
 
 

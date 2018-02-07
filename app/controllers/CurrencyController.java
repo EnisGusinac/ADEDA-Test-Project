@@ -13,11 +13,11 @@ public class CurrencyController extends Controller{
         return TODO;
     }
 
-    public Result edit() {
+    public Result edit(String id) {
         return TODO;
     }
 
-    public Result update(){
+    public Result update(String id){
         return TODO;
     }
 
