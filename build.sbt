@@ -1,4 +1,4 @@
-name := """play-java"""
+name := """ADEDA-Test-Project"""
 
 version := "1.0-SNAPSHOT"
 
