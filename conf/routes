@@ -12,7 +12,7 @@ GET     /currency/create                           controllers.CurrencyControlle
 GET     /currency/show/:id                         controllers.CurrencyController.show(id: String)
 GET     /currency/edit/:id                         controllers.CurrencyController.edit(id: String)
 POST    /currency/edit                             controllers.CurrencyController.update()
-GET     /currency/delete                           controllers.CurrencyController.delete()
+GET     /currency/delete/:id                       controllers.CurrencyController.delete(id: String)
 
 
 

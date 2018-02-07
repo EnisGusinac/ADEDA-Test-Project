@@ -3,6 +3,9 @@ package controllers;
 import play.mvc.Controller;
 import play.mvc.Result;
 
+/**
+ *  CurrencyController
+ */
 public class CurrencyController extends Controller{
 
     public Result index() {
@@ -29,7 +32,7 @@ public class CurrencyController extends Controller{
         return TODO;
     }
 
-    public Result delete() {
+    public Result delete(String id) {
         return TODO;
     }
 }
