@@ -7,7 +7,7 @@ GET     /                           controllers.HomeController.index
 
 
 # Routes for handling CurrencyController methods
-GET     /currency                                  controllers.CurrencyController.index
+GET     /currency                                  controllers.CurrencyController.index()
 GET     /currency/create                           controllers.CurrencyController.create()
 GET     /currency/show/:id                         controllers.CurrencyController.show(id: String)
 GET     /currency/edit/:id                         controllers.CurrencyController.edit(id: String)

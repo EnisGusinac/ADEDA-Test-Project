@@ -15,7 +15,7 @@ public class CurrencyController extends Controller {
     // show all the currencies available
     public Result index() {
         Set<Currency> currencies = Currency.allCurrencies();
-        return ok(index.render(currencies));
+        return ok(show.render(currencies));
     }
 
     public Result show(String id) {
