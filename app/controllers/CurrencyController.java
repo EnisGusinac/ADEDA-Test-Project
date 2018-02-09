@@ -1,6 +1,5 @@
 package controllers;
 
-import models.Currency;
 import play.mvc.Controller;
 import play.mvc.Result;
 import repositories.CurrencyRepository;
