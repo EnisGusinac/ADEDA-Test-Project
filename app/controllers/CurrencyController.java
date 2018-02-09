@@ -3,19 +3,17 @@ package controllers;
 import models.Currency;
 import play.mvc.Controller;
 import play.mvc.Result;
+import repositories.CurrencyRepository;
 import views.html.currencies.*;
-
-import java.util.Set;
 
 /**
  *  CurrencyController
  */
 public class CurrencyController extends Controller {
 
-    // show all the currencies available
+    // show all the currencies availables
     public Result index() {
-        Set<Currency> currencies = Currency.allCurrencies();
-        return ok(show.render(currencies));
+        return ok(show.render(CurrencyRepository.allCurrencies()));
     }
 
     public Result show(String id) {

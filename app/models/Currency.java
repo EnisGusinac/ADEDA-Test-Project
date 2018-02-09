@@ -1,7 +1,5 @@
 package models;
 
-import java.util.Set;
-
 /**
  *  Currency model
  */
@@ -23,44 +21,39 @@ public class Currency {
     public Double percent_change_7d;
     public Integer last_updated;
 
-    // Constructor
-    public Currency(String id, String name) {
+    // Here I will use Java Telescoping pattern (populating properties in constructor)
+    // instead of using Java Beans pattern (populating properties by using setters and getters)
+    public Currency(String id,
+                    String name,
+                    String symbol,
+                    Integer rank,
+                    Double price_usd,
+                    Double price_btc,
+                    Double volume_usd_24h,
+                    Double market_cap_usd,
+                    Double available_supply,
+                    Double total_supply,
+                    Double max_supply,
+                    Double percent_change_1h,
+                    Double percent_change_24h,
+                    Double percent_change_7d,
+                    Integer last_updated)
+    {
         this.id = id;
         this.name = name;
+        this.symbol = symbol;
+        this.rank = rank;
+        this.price_usd = price_usd;
+        this.price_btc = price_btc;
+        this.volume_usd_24h = volume_usd_24h;
+        this.market_cap_usd = market_cap_usd;
+        this.available_supply = available_supply;
+        this.total_supply = total_supply;
+        this.max_supply = max_supply;
+        this.percent_change_1h = percent_change_1h;
+        this.percent_change_24h = percent_change_24h;
+        this.percent_change_7d = percent_change_7d;
+        this.last_updated = last_updated;
     }
-
-    // Set the currencies as list of currency
-    private static Set<Currency> currencies;
-    // add an example of currency for show purpose
-    static {
-        currencies.add(new Currency("Eutherium", "Euth"));
-    }
-
-    // All Currencies
-    public static Set<Currency> allCurrencies() {
-        return currencies;
-    }
-
-    // Find specific currency in currencies
-    public static Currency findById(String id) {
-        for (Currency currency : currencies) {
-            if (id.equals(currency.id)){
-                return currency;
-            }
-        }
-        return null;
-    }
-
-    // add a new currency in a list
-    private static void add(Currency currency) {
-        currency.add(currency);
-    }
-
-    // remove specific currency
-    public static boolean remove(Currency currency) {
-        return currencies.remove(currency);
-    }
-
-
-
 }
+
