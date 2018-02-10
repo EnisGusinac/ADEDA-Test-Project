@@ -7,6 +7,7 @@ import java.util.Set;
 public class CurrencyRepository {
 
     public static Set<Currency> allCurrencies() {
+
         Set<Currency> currencies = new HashSet<>();
 
         currencies.add(new Currency("bitcoin", "Bitcoin",  "BTC", 1, 573.137, 1.0,
@@ -22,7 +23,10 @@ public class CurrencyRepository {
                 1710090000.0, 35741452836.0,39009215838.0,99992725510.0,100000000000.0,
                 -0.94,19.82,6.63,1518210241));
 
-
+        currencies.add(new Currency("bitcoin-cash", "Bitcoin Cash",  "BCH", 4, 1216.13, 0.148103,
+                714842000.0, 20626157663.0,16960488.0,16960488.0,21000000.0,
+                -1.36,-5.91,-3.8,1518296952));
+        
         return currencies;
     }
 
