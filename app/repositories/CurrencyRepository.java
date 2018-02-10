@@ -26,7 +26,11 @@ public class CurrencyRepository {
         currencies.add(new Currency("bitcoin-cash", "Bitcoin Cash",  "BCH", 4, 1216.13, 0.148103,
                 714842000.0, 20626157663.0,16960488.0,16960488.0,21000000.0,
                 -1.36,-5.91,-3.8,1518296952));
-        
+
+        currencies.add(new Currency("cardano", "Cardano",  "ADA", 5, 0.391123, 0.00004763,
+                926374000.0, 10140673610.0,25927070538.0,31112483745.0,45000000000.0,
+                -1.26,0.89,-10.8,1518296954));
+
         return currencies;
     }
 
