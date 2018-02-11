@@ -16,16 +16,16 @@ public class CurrencyController extends Controller {
     @Inject
     FormFactory formFactory;
 
-    // show all the currencies availables
+    // showAll all the currencies availables
     public Result index() {
-        return ok(show.render(CurrencyRepository.allCurrencies()));
+        return ok(showAll.render(CurrencyRepository.allCurrencies()));
     }
 
     public Result show(String id) {
         if (id == null){
             return notFound("Currency not found");
         }
-        return ok(showOneCurrency.render(CurrencyRepository.findById(id)));
+        return ok(showOne.render(CurrencyRepository.findById(id)));
     }
 
     public Result create() {
