@@ -22,12 +22,15 @@ public class CurrencyController extends Controller {
     }
 
     public Result show(String id) {
+        if (id == null){
+            return notFound("Currency not found");
+        }
         return ok(showOneCurrency.render(CurrencyRepository.findById(id)));
     }
 
     public Result create() {
         Form<Currency> currencyForm = formFactory.form(Currency.class);
-        return TODO;
+        return ok(create.render(currencyForm));
     }
 
     public Result edit(String id) {

@@ -1,0 +1,36 @@
+@import models.Currency
+
+@(form: Form[Currency])
+
+
+<h1>Add new Currency: </h1>
+<form action="@routes.CurrencyController.create()" method="post" >
+    <div class="form-group">
+        <label>Email address</label>
+         ID: <input type="text" class="form-control" id="id" placeholder="ID">
+        Name: <input type="text" class="form-control" placeholder="name" value="">
+        Symbol: <input type="text" class="form-control" placeholder="symbol" value="">
+        Rank: <input type="number" class="form-control" placeholder="rank" value="rank">
+        Price in USD: <input type="number" class="form-control" placeholder="Price in USD" value="price_usd">
+        Price in BTC: <input type="number" class="form-control" placeholder="Price in BTC" value="price_btc">
+        24h Volume in USD: <input type="number" class="form-control" placeholder="24h volume USD" value="volume_usd_24h">
+        Market cap USD: <input type="number" class="form-control" placeholder="Market cao USD" value="market_cap_usd">
+        Available supply: <input type="number" class="form-control" placeholder="Available Supply" value="available_supply">
+        Max supply: <input type="number" class="form-control" placeholder="Max Supply" value="max_supply">
+
+
+        public Double percent_change_1h;
+        public Double percent_change_24h;
+        public Double percent_change_7d;
+        public Integer last_updated;
+    </div>
+
+
+
+</form>
+
+
+    
+
+
+
