@@ -1,14 +1,20 @@
 package controllers;
 
+import models.Currency;
+import play.data.Form;
+import play.data.FormFactory;
 import play.mvc.Controller;
 import play.mvc.Result;
 import repositories.CurrencyRepository;
 import views.html.currencies.*;
+import javax.inject.Inject;
 
 /**
  *  CurrencyController
  */
 public class CurrencyController extends Controller {
+    @Inject
+    FormFactory formFactory;
 
     // show all the currencies availables
     public Result index() {
@@ -16,10 +22,11 @@ public class CurrencyController extends Controller {
     }
 
     public Result show(String id) {
-        return TODO;
+        return ok(showOneCurrency.render(CurrencyRepository.findById(id)));
     }
 
     public Result create() {
+        Form<Currency> currencyForm = formFactory.form(Currency.class);
         return TODO;
     }
 

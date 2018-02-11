@@ -49,9 +49,13 @@ public class CurrencyRepository {
         return currencies;
     }
 
+    /**
+     *  Find specific item by its Id.
+     * @param id
+     * @return
+     */
     public static Currency findById(String id) {
-        Set<Currency> currencies = new HashSet<>();
-        for (Currency currency : currencies) {
+        for (Currency currency : allCurrencies()) {
             if (id.equals(currency.id)) {
                 return currency;
             }
@@ -59,6 +63,22 @@ public class CurrencyRepository {
         return null;
     }
 
+    /**
+     * Add new values to currency object
+     * @param currency
+     */
+    public static void add(Currency currency) {
+        allCurrencies().add(currency);
+    }
+
+
+    /**
+     * Remove currency from repository
+     * @param currency
+     */
+    public static boolean remove(Currency currency) {
+        return  allCurrencies().remove(currency);
+    }
 
 
 
