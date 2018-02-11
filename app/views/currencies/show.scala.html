@@ -1,10 +1,12 @@
 @(currencies: Set[models.Currency])
 
+<a href="/">Return to Home</a>
+
 <h1>All Crypto Currencies</h1>
 
 @for(currency <- currencies){
-    <h1>Currency name:
-    <a href="@routes.CurrencyController.show(currency.id)"> @currency.name</a></h1>
+    <h2>Currency name:
+    <a href="@routes.CurrencyController.show(currency.id)"> @currency.name</a></h2>
 
     <p> Symbol: @currency.symbol </p>
     <p> Rank: @currency.rank </p>
