@@ -55,5 +55,6 @@ public class Currency {
         this.percent_change_7d = percent_change_7d;
         this.last_updated = last_updated;
     }
+
 }
 

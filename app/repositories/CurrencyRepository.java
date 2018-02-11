@@ -49,4 +49,17 @@ public class CurrencyRepository {
         return currencies;
     }
 
+    public static Currency findById(String id) {
+        Set<Currency> currencies = new HashSet<>();
+        for (Currency currency : currencies) {
+            if (id.equals(currency.id)) {
+                return currency;
+            }
+        }
+        return null;
+    }
+
+
+
+
 }
