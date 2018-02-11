@@ -9,7 +9,7 @@ import views.html.*;
  */
 public class HomeController extends Controller {
 
-    public Result index() {
+    public Result home() {
         return ok(index.render("ADIDA Test app"));
     }
 
