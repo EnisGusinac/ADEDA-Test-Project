@@ -7,6 +7,8 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import repositories.CurrencyRepository;
 import views.html.currencies.*;
+import views.html.index;
+
 import javax.inject.Inject;
 
 /**
@@ -42,7 +44,10 @@ public class CurrencyController extends Controller {
     }
 
     public Result save() {
-        return TODO;
+        Form<Currency> currencyForm = formFactory.form(Currency.class).bindFromRequest();
+        Currency currency = currencyForm.get();
+        CurrencyRepository.add(currency);
+        return ok(index.render("New Currency created"));
     }
 
     public Result delete(String id) {

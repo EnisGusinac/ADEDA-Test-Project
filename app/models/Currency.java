@@ -21,6 +21,9 @@ public class Currency {
     public Double percent_change_7d;
     public Integer last_updated;
 
+    // default constructor for save method
+    public Currency() { }
+
     // Here I will use Java Telescoping pattern (populating properties in constructor)
     // instead of using Java Beans pattern (populating properties by using setters and getters)
     public Currency(String id,
