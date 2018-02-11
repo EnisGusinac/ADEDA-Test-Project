@@ -4,7 +4,7 @@
 
 @for(currency <- currencies){
     <h1>Currency name:
-    <a href=""> @currency.name</a></h1>
+    <a href="@routes.CurrencyController.show(currency.id)"> @currency.name</a></h1>
 
     <p> Symbol: @currency.symbol </p>
     <p> Rank: @currency.rank </p>
