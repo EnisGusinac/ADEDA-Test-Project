@@ -4,9 +4,9 @@
 
 
 <h1>Add new Currency: </h1>
-<form action="@routes.CurrencyController.create()" method="post" >
+<form action="@routes.CurrencyController.create()" method="post">
     <div class="form-group">
-        <label>Email address</label>
+        <label>Fill the form</label>
          ID: <input type="text" class="form-control" id="id" placeholder="ID">
         Name: <input type="text" class="form-control" placeholder="name" value="">
         Symbol: <input type="text" class="form-control" placeholder="symbol" value="">
@@ -17,12 +17,11 @@
         Market cap USD: <input type="number" class="form-control" placeholder="Market cao USD" value="market_cap_usd">
         Available supply: <input type="number" class="form-control" placeholder="Available Supply" value="available_supply">
         Max supply: <input type="number" class="form-control" placeholder="Max Supply" value="max_supply">
+        Percent change in 1h: <input type="number" class="form-control" placeholder="Percent change in 1h" value="percent_change_1h">
+        Percent change in 24h: <input type="number" class="form-control" placeholder="Percent change in 24h" value="percent_change_24h">
+        Percent change in 7d: <input type="number" class="form-control" placeholder="Percent change in 7d" value="percent_change_7d">
+        Last updated: <input type="number" class="form-control" placeholder="Last updated" value="last_updated">
 
-
-        public Double percent_change_1h;
-        public Double percent_change_24h;
-        public Double percent_change_7d;
-        public Integer last_updated;
     </div>
 
 
