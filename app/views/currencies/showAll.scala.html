@@ -4,40 +4,42 @@
 
 <h1>All Crypto Currencies</h1>
 
-    @*  Search field  *@
-<nav class="navbar navbar-light bg-light justify-content-between">
-    <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-</nav>
-
-    @*  Select form  *@
+@* Select form *@
 <div class="input-group mb-3">
-        <select class="custom-select" id="inputGroupSelect02">
-            <option selected>Choose currency</option>
-            @for(currency <- currencies) {
-            <option value="1">@currency.name</option>
-            }
+    <select class="custom-select" id="inputGroupSelect02">
+        <option selected>Choose currency</option>
+        @for(currency <- currencies) {
+            <option value="">@currency.name</option>
+        }
         </select>
 </div>
 
-@for(currency <- currencies) {
-    <h2>Currency name:
-        <a href="@routes.CurrencyController.show(currency.id)"> @currency.name</a> </h2>
+@* Search field *@
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for cryptocurrency.." title="Type in a currency">
 
-    <p> Symbol: @currency.symbol </p>
-    <p> Rank: @currency.rank </p>
-    <p> Price USD: @currency.price_usd </p>
-    <p> Price BitCoin: @currency.price_btc </p>
-    <p> Volume in USD in 24h: @currency.volume_usd_24h </p>
-    <p> Market cap USD: @currency.market_cap_usd </p>
-    <p> Available supply: @currency.available_supply </p>
-    <p> Total supply: @currency.total_supply </p>
-    <p> Max supply: @currency.max_supply </p>
-    <p> Percent change in 1h: @currency.percent_change_1h </p>
-    <p> Percent change in 24h: @currency.percent_change_24h </p>
-    <p> Percent change in 7d: @currency.percent_change_7d </p>
-    <p> Last updated: @currency.last_updated </p>
+    <ul id="searchUl">
+    @for(currency <- currencies) {
+<li>
+    <a href="@routes.CurrencyController.show(currency.id)">@currency.name</a>
+</li>
 
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("searchUl");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+
+        }
+    }
 }
+</script>
+}
+</ul>
