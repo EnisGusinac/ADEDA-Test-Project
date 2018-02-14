@@ -13,5 +13,4 @@ public class HomeController extends Controller {
         return ok(index.render("ADIDA Test app"));
     }
 
-
 }
