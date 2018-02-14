@@ -8,11 +8,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
-        <title>Digital Cash - Bitcoin</title>
+        <title>Digital Cash</title>
         <meta name="description" content="Real-Time Cryptocurrency Markets"/>
 
         <link rel="icon" type="image/png" href="http://digitalcash.trade/images/download/favicon">
-
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
         <link rel="stylesheet" href="http://digitalcash.trade/assets/frontend/frontend.css">
@@ -44,12 +43,7 @@
                 <div class="centered row">
                     <div class="center aligned sixteen wide column">
                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                            <!-- DigitalCashTop -->
-                        <ins class="adsbygoogle"
-                        style="display: block"
-                        data-ad-client="ca-pub-1652563154229588"
-                        data-ad-slot="4327884758"
-                        data-ad-format="auto"></ins>
+
                         <script>
                                 (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>            </div>
@@ -145,6 +139,22 @@
             </div>
         </div>
 
+        <h1> Statistics </h1>
+        <h1>Name: @currency.name</h1>
+
+        <p> Symbol: @currency.symbol </p>
+        <p> Rank: @currency.rank </p>
+        <p> Price USD: @currency.price_usd </p>
+        <p> Price BitCoin: @currency.price_btc </p>
+        <p> Volume in USD in 24h: @currency.volume_usd_24h </p>
+        <p> Market cap USD: @currency.market_cap_usd </p>
+        <p> Available supply: @currency.available_supply </p>
+        <p> Total supply: @currency.total_supply </p>
+        <p> Max supply: @currency.max_supply </p>
+        <p> Percent change in 1h: @currency.percent_change_1h </p>
+        <p> Percent change in 24h: @currency.percent_change_24h </p>
+        <p> Percent change in 7d: @currency.percent_change_7d </p>
+        <p> Last updated: @currency.last_updated </p>
 
         <div id="footer" class="ui inverted   very relaxed segment">
 
@@ -194,23 +204,4 @@
 
         </script>
     </body>
-
-    <a href="@routes.CurrencyController.index()"> Return to All Currencies</a>
-
-    <h1>Name: @currency.name</h1>
-
-    <p> Symbol: @currency.symbol </p>
-    <p> Rank: @currency.rank </p>
-    <p> Price USD: @currency.price_usd </p>
-    <p> Price BitCoin: @currency.price_btc </p>
-    <p> Volume in USD in 24h: @currency.volume_usd_24h </p>
-    <p> Market cap USD: @currency.market_cap_usd </p>
-    <p> Available supply: @currency.available_supply </p>
-    <p> Total supply: @currency.total_supply </p>
-    <p> Max supply: @currency.max_supply </p>
-    <p> Percent change in 1h: @currency.percent_change_1h </p>
-    <p> Percent change in 24h: @currency.percent_change_24h </p>
-    <p> Percent change in 7d: @currency.percent_change_7d </p>
-    <p> Last updated: @currency.last_updated </p>
-
 </html>
