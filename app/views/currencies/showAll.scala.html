@@ -43,3 +43,248 @@ function myFunction() {
 </script>
 }
 </ul>
+
+
+<!DOCTYPE html>
+<html lang="en" ng-app="CoinTable">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+        <title>Digital Cash - Market View</title>
+        <meta name="description" content="Real-Time Cryptocurrency Markets"/>
+        <meta name="keywords" content="Cryptocurrency, Bitcoin, Ethereum,"/>
+        <link rel="canonical" href="http://digitalcash.trade"/>
+
+        <link rel="icon" type="image/png" href="http://digitalcash.trade/images/download/favicon">
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
+        <link rel="stylesheet" href="http://digitalcash.trade/assets/frontend/frontend.css">
+
+        <style></style>
+    </head>
+    <body>
+        <div id="side-menu" class="ui left sidebar vertical inverted compact menu">
+            <div class="item">
+                <img src="http://digitalcash.trade/images/download/main_menu_image" class="ui tiny centered image">
+            </div>
+            <a class="item" href="/">
+                Home        </a>
+        </div>
+        <div class="pusher">
+            <div id="top-menu" class="ui inverted violet labeled icon menu">
+                <a class="item" href="/">
+                    <i class="sidebar icon"></i>
+                    Home        </a>
+
+            </div>
+
+            <div id="market"
+            class="ui basic segment stackable grid loading"
+            ng-controller="marketCtrl">
+
+                <div class="centered row">
+                    <div class="center aligned sixteen wide column">
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-1652563154229588"
+                        data-ad-slot="5005223402"
+                        data-ad-format="auto"></ins>
+                        <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>        </div>
+                </div>
+
+                <div class="centered row">
+                    <div class="fourteen wide column">
+                        <div class="ui basic segment">
+                            <h1 class="ui header">
+                                <div class="content">
+                                    Market View                        <div class="sub header">Markets Real-Time Information</div>
+                                </div>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="centered row">
+                    <div class="center aligned sixteen wide column">
+                    </div>
+                </div>
+
+                <div class="centered row">
+                    <div class="fourteen wide column">
+
+                        <div class="ui basic segment">
+                            <div id="coin-table" class="coin-table"
+                            order-by="'market_cap'"
+                            order-direction="'1'"
+                            columns="'name,price,market_cap,volume_24h,change_1h,change_24h,change_7d'"
+                            columns-labels='{"name":"Name","price":"Price","market_cap":"Market Cap","available_supply":"Available Supply","total_supply":"Total Supply","volume_24h":"Volume 24h","change_1h":"% 1h","change_24h":"% 24h","change_7d":"% 7d"}'
+                            >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="centered row">
+                    <div class="center aligned sixteen wide column">
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-1652563154229588"
+                        data-ad-slot="5005223402"
+                        data-ad-format="auto"></ins>
+                        <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>            </div>
+                </div>
+            </div>
+            <div id="footer" class="ui inverted   very relaxed segment">
+                <div class="ui stackable inverted grid">
+                    <div class="centered row">
+                        <div class=" four wide column">
+                            <h4 class="ui inverted header">
+                                Useful Links                    </h4>
+                            <div class="ui inverted link list">
+                                <a class="item" href="http://digitalcash.trade/go/footer/0">
+                                    Buy & Sell Bitcoin        </a>
+                                <a class="item" href="http://digitalcash.trade/go/footer/1">
+                                    Web Hosting        </a>
+                            </div>
+                        </div>
+                        <div class=" four wide column">
+                            <h4 class="ui inverted header">
+                                Follow Us                    </h4>
+                            <div class="ui inverted link list">
+                                <a class="item" target="_blank" href="https://www.facebook.com/runcoders/">
+                                    <i class="facebook icon"></i>
+                                    Facebook            </a>
+                            </div>
+                        </div>
+                        <div class="four wide column">
+                            <h4 class="ui inverted header">Donation</h4>
+                            <p>Your contribution is vital for us.</p>
+                            <a ng-click="openDonationModal()"
+                            class="ui violet  labeled icon button">
+                                <i class="bitcoin icon"></i>
+                                Donate                        </a>
+
+                        </div>
+                    </div>
+                    <div class="centered row">
+                        <div class="twelve wide column">
+                            <div class="ui inverted section divider"></div>
+                        </div>
+                    </div>
+                    <div class="centered row">
+                        <div class="center aligned twelve wide column">
+                            <img class="ui centered mini image" src="http://digitalcash.trade/images/download/copyrights_image">
+                            <div class="ui inverted link list">
+                                <div class="item">2017 &copy; DigitalCash</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="donation-modal" class="ui modal">
+                <div class="header">
+                    Donation        </div>
+                <div class="content">
+                    <div class="ui positive message">You contribution is vital for our project. Here are our cryptocurrencies addresses.</div>
+                    <form class="ui form">
+                        <div class="field">
+                            <label>Bitcoin</label>
+                            <div class="ui fluid action input">
+                                <input id="donation-addr-0" readonly type="text" value="3BPvAJVD7AUJ2JaE9ttEyMPDuXauGDU4Kt">
+                                <button class="ui blue right labeled icon button"
+                                ng-click="copyBTCAddress('0')">
+                                    <i class="copy icon"></i>
+                                    Copy
+                                </button>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>Litecoin</label>
+                            <div class="ui fluid action input">
+                                <input id="donation-addr-1" readonly type="text" value="LKa83CQJHuUjMLkrChf2MSbfu1LE4deJK3">
+                                <button class="ui blue right labeled icon button"
+                                ng-click="copyBTCAddress('1')">
+                                    <i class="copy icon"></i>
+                                    Copy
+                                </button>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>Monero</label>
+                            <div class="ui fluid action input">
+                                <input id="donation-addr-2" readonly type="text" value="4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRxQnyS4xYaaKCGjZgh">
+                                <button class="ui blue right labeled icon button"
+                                ng-click="copyBTCAddress('2')">
+                                    <i class="copy icon"></i>
+                                    Copy
+                                </button>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>Dogecoin</label>
+                            <div class="ui fluid action input">
+                                <input id="donation-addr-3" readonly type="text" value="D9AfGsp5pLyZRphmsGJBqZbenNYR5kcXhd">
+                                <button class="ui blue right labeled icon button"
+                                ng-click="copyBTCAddress('3')">
+                                    <i class="copy icon"></i>
+                                    Copy
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="actions">
+                    <div class="ui positive right labeled icon button">
+                        Thank you                <i class="checkmark icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/money.js/0.2.0/money.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+        <script src="https://www.gstatic.com/charts/loader.js"></script>
+        <script>
+                var CoinTableConstants = {
+                    default_price: 'USD',
+                    theme: 'violet',
+                    URLs: {
+                        images: {
+                            download: 'http://digitalcash.trade/images/download',
+                            upload: 'http://digitalcash.trade/images/upload'
+                        },
+                        api: {
+                            options: 'http://digitalcash.trade/api/options',
+                            custom_pages: 'http://digitalcash.trade/api/custom_pages',
+                            chart_data: 'http://digitalcash.trade/api/chart_data',
+                        },
+                        custom_pages: 'http://digitalcash.trade/p',
+                        currency_page: 'http://digitalcash.trade/currency'
+                    }
+                }
+        </script>
+        <script src="http://digitalcash.trade/assets/frontend/semantic-writer.min.js"></script>
+        <script src="http://digitalcash.trade/assets/frontend/frontend.min.js"></script>
+        <script>
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-93485550-20', 'auto');
+                ga('send', 'pageview');
+
+        </script>
+    </body>
+</html>
