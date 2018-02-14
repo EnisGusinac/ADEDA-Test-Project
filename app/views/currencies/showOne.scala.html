@@ -1,10 +1,203 @@
 @import models.Currency
 @(currency: Currency)
 
+<!DOCTYPE html>
+<html lang="en" ng-app="CoinTable">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
-<a href="@routes.CurrencyController.index()"> Return to All Currencies</a>
+        <title>Digital Cash - Bitcoin</title>
+        <meta name="description" content="Real-Time Cryptocurrency Markets"/>
 
-<h1>Name: @currency.name</h1>
+        <link rel="icon" type="image/png" href="http://digitalcash.trade/images/download/favicon">
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
+        <link rel="stylesheet" href="http://digitalcash.trade/assets/frontend/frontend.css">
+
+        <style></style>
+    </head>
+    <body>
+        <div id="side-menu" class="ui left sidebar vertical inverted compact menu">
+            <div class="item">
+                <img src="http://digitalcash.trade/images/download/main_menu_image" class="ui tiny centered image">
+            </div>
+            <a class="item" href="@routes.CurrencyController.index()">
+                All Currencies      </a>
+        </div>
+        <div class="pusher">
+            <div id="top-menu" class="ui inverted violet labeled icon menu">
+                <a class="item" href="@routes.CurrencyController.index()">
+                    <i class="sidebar icon"></i>
+                    All currencies        </a>
+            </div>
+
+
+            <div id="currency" class="ui basic segment stackable grid"
+            ng-controller="currencyCtrl"
+            data-symbol="BTC"
+            data-chart-available="1"
+            ng-cloak>
+
+                <div class="centered row">
+                    <div class="center aligned sixteen wide column">
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <!-- DigitalCashTop -->
+                        <ins class="adsbygoogle"
+                        style="display: block"
+                        data-ad-client="ca-pub-1652563154229588"
+                        data-ad-slot="4327884758"
+                        data-ad-format="auto"></ins>
+                        <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>            </div>
+                </div>
+
+                <div class="centered row">
+                    <div class="twelve wide column">
+                        <div class="ui basic segment">
+                            <h1 class="ui left floated header">
+                                <div class="content">
+                                    @currency.name
+                                    <div class="sub header"> @currency.symbol </div>
+                                </div>
+                            </h1>
+                        </div>
+                        <div class="ui right aligned basic segment">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="centered row">
+                    <div class="center aligned sixteen wide column">
+                    </div>
+                </div>
+
+                <div class="centered row">
+                    <div class="twelve wide column">
+
+                        <div id="currency-info" class="ui basic loading segment">
+                            <div class="ui raised five doubling violet cards">
+                                <div class="card">
+                                    <div class="center aligned content">
+                                        <div class="header">Ranking</div>
+                                        <div class="center aligned description">@currency.rank</div>
+                                    </div>
+                                    <div class="center aligned extra content" ng-bind="'TOP'"></div>
+                                </div>
+                                <div class="card">
+                                    <div class="center aligned content">
+                                        <div class="header">Price</div>
+                                        <div class="center aligned description">@currency.price_usd</div>
+                                    </div>
+                                    <div class="center aligned extra content">BTC price: @currency.price_btc</div>
+                                </div>
+                                <div class="card">
+                                    <div class="center aligned content">
+                                        <div class="header">Volume 24h</div>
+                                        <div class="center aligned description">@currency.volume_usd_24h</div>
+                                    </div>
+                                    <div class="center aligned extra content" ng-bind="'BTC'"></div>
+                                </div>
+                                <div class="card">
+                                    <div class="center aligned content">
+                                        <div class="header">Market Cap</div>
+                                        <div class="center aligned description" >@currency.market_cap_usd</div>
+                                    </div>
+                                    <div class="center aligned extra content" ng-bind="price_in"></div>
+                                </div>
+                                <div class="card">
+                                    <div class="center aligned content">
+                                        <div class="header">Available Supply</div>
+                                        <div class="center aligned description">@currency.available_supply</div>
+                                    </div>
+                                    <div class="center aligned extra content" ng-bind="currency.symbol"></div>
+                                </div>
+                                <div class="card">
+                                    <div class="center aligned content">
+                                        <div class="header">Change 1h</div>
+                                        <div class="center aligned description">@currency.percent_change_1h</div>
+                                    </div>
+                                    <div class="center aligned extra content" ng-bind="'%'"></div>
+                                </div>
+                                <div class="card">
+                                    <div class="center aligned content">
+                                        <div class="header">Change 24h</div>
+                                        <div class="center aligned description">@currency.percent_change_24h</div>
+                                    </div>
+                                    <div class="center aligned extra content" ng-bind="'%'"></div>
+                                </div>
+                                <div class="card">
+                                    <div class="center aligned content">
+                                        <div class="header">Change 7d</div>
+                                        <div class="center aligned description">@currency.percent_change_7d</div>
+                                    </div>
+                                    <div class="center aligned extra content" ng-bind="'%'"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="footer" class="ui inverted   very relaxed segment">
+
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/money.js/0.2.0/money.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+        <script src="https://www.gstatic.com/charts/loader.js"></script>
+        <script>
+                var CoinTableConstants = {
+                    default_price: 'USD',
+                    theme: 'violet',
+                    URLs: {
+                        images: {
+                            download: 'http://digitalcash.trade/images/download',
+                            upload: 'http://digitalcash.trade/images/upload'
+                        },
+                        api: {
+                            options: 'http://digitalcash.trade/api/options',
+                            custom_pages: 'http://digitalcash.trade/api/custom_pages',
+                            chart_data: 'http://digitalcash.trade/api/chart_data',
+                        },
+                        custom_pages: 'http://digitalcash.trade/p',
+                        currency_page: 'http://digitalcash.trade/currency'
+                    }
+                }
+        </script>
+        <script src="http://digitalcash.trade/assets/frontend/semantic-writer.min.js"></script>
+        <script src="http://digitalcash.trade/assets/frontend/frontend.min.js"></script>
+        <script>
+                (function (i, s, o, g, r, a, m) {
+                    i['GoogleAnalyticsObject'] = r;
+                    i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+                    a = s.createElement(o),
+                            m = s.getElementsByTagName(o)[0];
+                    a.async = 1;
+                    a.src = g;
+                    m.parentNode.insertBefore(a, m)
+                })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+                ga('create', 'UA-93485550-20', 'auto');
+                ga('send', 'pageview');
+
+        </script>
+    </body>
+
+    <a href="@routes.CurrencyController.index()"> Return to All Currencies</a>
+
+    <h1>Name: @currency.name</h1>
 
     <p> Symbol: @currency.symbol </p>
     <p> Rank: @currency.rank </p>
@@ -19,3 +212,5 @@
     <p> Percent change in 24h: @currency.percent_change_24h </p>
     <p> Percent change in 7d: @currency.percent_change_7d </p>
     <p> Last updated: @currency.last_updated </p>
+
+</html>
