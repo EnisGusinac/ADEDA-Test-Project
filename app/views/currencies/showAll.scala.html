@@ -1,50 +1,5 @@
 @(currencies: Set[models.Currency])
 
-<a href="/">Return to Home</a>
-
-<h1>All Crypto Currencies</h1>
-
-@* Select form *@
-<div class="input-group mb-3">
-    <select class="custom-select" id="inputGroupSelect02">
-        <option selected>Choose currency</option>
-        @for(currency <- currencies) {
-            <option value="">@currency.name</option>
-        }
-        </select>
-</div>
-
-@* Search field *@
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for cryptocurrency.." title="Type in a currency">
-
-    <ul id="searchUl">
-    @for(currency <- currencies) {
-<li>
-    <a href="@routes.CurrencyController.show(currency.id)">@currency.name</a>
-</li>
-
-<script>
-function myFunction() {
-    var input, filter, ul, li, a, i;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("searchUl");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-
-        }
-    }
-}
-</script>
-}
-</ul>
-
-
 <!DOCTYPE html>
 <html lang="en" ng-app="CoinTable">
     <head>
@@ -174,3 +129,49 @@ function myFunction() {
         </script>
     </body>
 </html>
+
+
+<a href="/">Return to Home</a>
+
+<h1>All Crypto Currencies</h1>
+
+@* Select form *@
+<div class="input-group mb-3">
+    <select class="custom-select" id="inputGroupSelect02">
+        <option selected>Choose currency</option>
+        @for(currency <- currencies) {
+            <option value="">@currency.name</option>
+        }
+        </select>
+</div>
+
+@* Search field *@
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for cryptocurrency.." title="Type in a currency">
+
+<ul id="searchUl">
+@for(currency <- currencies) {
+    <li>
+        <a href="@routes.CurrencyController.show(currency.id)">@currency.name</a>
+    </li>
+
+    <script>
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("searchUl");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+
+        }
+    }
+}
+</script>
+}
+</ul>
+
