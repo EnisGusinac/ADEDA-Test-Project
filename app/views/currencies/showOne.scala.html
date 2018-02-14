@@ -139,6 +139,22 @@
             </div>
         </div>
 
+        <h1> Statistics </h1>
+        <h1>Name: @currency.name</h1>
+
+        <p> Symbol: @currency.symbol </p>
+        <p> Rank: @currency.rank </p>
+        <p> Price USD: @currency.price_usd </p>
+        <p> Price BitCoin: @currency.price_btc </p>
+        <p> Volume in USD in 24h: @currency.volume_usd_24h </p>
+        <p> Market cap USD: @currency.market_cap_usd </p>
+        <p> Available supply: @currency.available_supply </p>
+        <p> Total supply: @currency.total_supply </p>
+        <p> Max supply: @currency.max_supply </p>
+        <p> Percent change in 1h: @currency.percent_change_1h </p>
+        <p> Percent change in 24h: @currency.percent_change_24h </p>
+        <p> Percent change in 7d: @currency.percent_change_7d </p>
+        <p> Last updated: @currency.last_updated </p>
 
         <div id="footer" class="ui inverted   very relaxed segment">
 
@@ -188,23 +204,4 @@
 
         </script>
     </body>
-
-    <a href="@routes.CurrencyController.index()"> Return to All Currencies</a>
-
-    <h1>Name: @currency.name</h1>
-
-    <p> Symbol: @currency.symbol </p>
-    <p> Rank: @currency.rank </p>
-    <p> Price USD: @currency.price_usd </p>
-    <p> Price BitCoin: @currency.price_btc </p>
-    <p> Volume in USD in 24h: @currency.volume_usd_24h </p>
-    <p> Market cap USD: @currency.market_cap_usd </p>
-    <p> Available supply: @currency.available_supply </p>
-    <p> Total supply: @currency.total_supply </p>
-    <p> Max supply: @currency.max_supply </p>
-    <p> Percent change in 1h: @currency.percent_change_1h </p>
-    <p> Percent change in 24h: @currency.percent_change_24h </p>
-    <p> Percent change in 7d: @currency.percent_change_7d </p>
-    <p> Last updated: @currency.last_updated </p>
-
 </html>
