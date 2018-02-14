@@ -67,11 +67,7 @@
                 <div class="centered row">
                     <div class="center aligned sixteen wide column">
                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        <ins class="adsbygoogle"
-                        style="display: block"
-                        data-ad-client="ca-pub-1652563154229588"
-                        data-ad-slot="5005223402"
-                        data-ad-format="auto"></ins>
+
                         <script>
                                 (adsbygoogle = window.adsbygoogle || []).push({});
                         </script>            </div>
@@ -130,18 +126,6 @@
 </html>
 
 
-<a href="/">Return to Home</a>
-
-<h1>All Crypto Currencies</h1>
-@* Select form *@
-<div class="input-group mb-3">
-    <select class="custom-select" id="inputGroupSelect02">
-        <option selected>Choose currency</option>
-        @for(currency <- currencies) {
-            <option value="">@currency.name</option>
-        }
-        </select>
-</div>
 @* Search field *@
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for cryptocurrency.." title="Type in a currency">
 
@@ -152,6 +136,7 @@
     </li>
 
     <script>
+        // jQuery for search currency by name
 function myFunction() {
     var input, filter, ul, li, a, i;
     input = document.getElementById("myInput");
