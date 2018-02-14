@@ -5,17 +5,9 @@
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.home
 
-
-# Routes for handling CurrencyController methods
+# Routes for handling CurrencyController
 GET     /currency                                  controllers.CurrencyController.index()
-GET     /currency/create                           controllers.CurrencyController.create()
 GET     /currency/show/:id                         controllers.CurrencyController.show(id: String)
-GET     /currency/edit/:id                         controllers.CurrencyController.edit(id: String)
-POST    /currency/edit                             controllers.CurrencyController.update()
-POST    /currency/create                           controllers.CurrencyController.save()
-GET     /currency/delete/:id                       controllers.CurrencyController.delete(id: String)
-
-
 
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count

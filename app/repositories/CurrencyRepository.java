@@ -83,23 +83,4 @@ public class CurrencyRepository {
         return null;
     }
 
-    /**
-     * Add new values to currency object
-     * @param currency
-     */
-    public static void add(Currency currency) {
-        allCurrencies().add(currency);
-    }
-
-
-    /**
-     * Remove currency from repository
-     * @param currency
-     */
-    public static boolean remove(Currency currency) {
-        return  allCurrencies().remove(currency);
-    }
-
-
-
 }
