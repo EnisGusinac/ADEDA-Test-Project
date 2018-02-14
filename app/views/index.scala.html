@@ -1,11 +1,5 @@
 @(message: String)
 
-<h1>@message</h1>
-<h2>
-    <a href="@routes.CurrencyController.index()"> Go to all Currencies </a>
-</h2>
-
-
 <!DOCTYPE html>
 <html lang="en" ng-app="CoinTable">
     <head>
@@ -55,12 +49,13 @@
                     <h1 class="ui header">
                         <i class="star icon"></i>
                         <div class="content">
-                            Our Selection                </div>
+                            Our Selection
+                        </div>
                     </h1>
                     <div class="ui basic segment" >
                         <div class="ui raised stackable three link violet cards">
                             <a class="card" ng-repeat="feat in featured"
-                            ng-href="{{ 'http://digitalcash.trade/currency/' + feat.symbol }}">
+                            href="@routes.CurrencyController.index()">
                                 <div class="content">
                                     <div class="header" ng-bind="feat.name"></div>
                                     <div class="meta" ng-bind="feat.symbol"></div>
